@@ -1,0 +1,60 @@
+void main()
+{
+   int i,n, arr[i], size,j,a;
+  
+   printf("\n enter the size of array:");
+   scanf("%d",&size);
+    
+   printf("\n enter the elements of array:");
+   for(i=0; i<size; i++)
+   {
+       scanf("%d",&arr[i]);
+   }
+   printf("\n enter 0 for ascending and 1 for descending");
+   scanf("\n %d",&a);
+   
+   if(a==0)
+   {
+   for(i=0; i<size; i++)
+   {
+       
+       for(j=i+1; j<size; j++)
+       {
+           if(arr[i]> arr[j])
+           {
+               n= arr[i];
+               arr[i]=arr[j];
+               arr[j]=n;
+           }
+       }
+   }
+  printf("\n the ascending order is:");
+  
+  for(i=0; i<size; i++)
+  {
+  printf("\n %d",arr[i]);
+  }
+ }
+if(a==1)
+{
+     for(i=0; i<size; i++)
+   {
+       
+       for(j=i+1; j<size; j++)
+       {
+           if(arr[i]< arr[j])
+           {
+               n= arr[i];
+               arr[i]=arr[j];
+               arr[j]=n;
+           }
+       }
+   }
+  printf("\n the descending order is:");
+  
+  for(i=0; i<size; i++)
+  {
+  printf("\n %d",arr[i]);
+  }
+}
+}
